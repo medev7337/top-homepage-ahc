@@ -1,5 +1,0 @@
-fly a fly - https://sm7337.itch.io/fly-a-fly
-cal - https://sm7337.github.io/calculator-top/
-etch - https://sm7337.github.io/etch-a-sketch-top/
-ttt - https://sm7337.github.io/top-tic-tac-toe-project/
-ship - https://medev7337.github.io/TOP-Battleship/

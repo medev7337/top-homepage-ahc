@@ -37,6 +37,7 @@ body {
   flex: 1 1 30%;
   aspect-ratio: 1/1;
   background-color: black;
+  outline: 3px solid var(--primary);
   border-radius: 50%;
   z-index: 1;
   display: flex;
@@ -61,6 +62,7 @@ body {
   margin-left: -150px;
   padding-left: 170px;
   border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .details > div > p {
@@ -83,10 +85,11 @@ body {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .card {
+  cursor: pointer;
   background-color: var(--primary-container);
   height: 50vh;
   display: flex;
@@ -95,6 +98,16 @@ body {
   border-radius: 30px;
   padding-bottom: 1rem;
   font-size: small;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+  transform-origin: center bottom;
+}
+
+.card:hover {
+  transform: translateY(-3px) perspective(800px) rotateX(6deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .card h2 {
@@ -141,6 +154,7 @@ body {
   padding-left: 10vw;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 #contact-left {
@@ -157,7 +171,7 @@ body {
 }
 
 #contact-right {
-  flex: 1 1 80%;
+  flex: 1 1 70%;
   aspect-ratio: 1/1;
   background-color: black;
   border-radius: 50%;
@@ -165,6 +179,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: 3px solid var(--primary);
 }
 
 #contact-right img {
