@@ -1,7 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  --background: #0d1411;
+  --surface: #151f1a;
+  --surface-variant: #24352b;
+  --primary: #6dd6a3;
+  --primary-container: #174d35;
+  --secondary: #b4ccbb;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--primary);
+}
+
+html,
+body {
+  background-color: var(--background);
 }
 
 .main_cont {
@@ -35,7 +53,7 @@
 .details {
   padding: 2rem;
   flex: 1 1 60%;
-  background-color: green;
+  background-color: var(--surface);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -43,6 +61,10 @@
   margin-left: -150px;
   padding-left: 170px;
   border-radius: 50px;
+}
+
+.details > div > p {
+  color: var(--secondary);
 }
 
 .iconset {
@@ -53,8 +75,8 @@
 }
 
 .iconset img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 #work {
@@ -65,12 +87,14 @@
 }
 
 .card {
-  background-color: blue;
-  height: 40vh;
+  background-color: var(--primary-container);
+  height: 50vh;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   border-radius: 30px;
+  padding-bottom: 1rem;
+  font-size: small;
 }
 
 .card h2 {
@@ -81,10 +105,11 @@
 .card p {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  color: var(--secondary);
 }
 
 .card div {
-  height: 60%;
+  height: 70%;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
   overflow: hidden;
@@ -110,7 +135,7 @@
   justify-content: center;
   height: 50vh;
   gap: 10vw;
-  background-color: aqua;
+  background-color: var(--surface);
   align-items: center;
   padding-right: 10vw;
   padding-left: 10vw;
@@ -132,16 +157,19 @@
 }
 
 #contact-right {
-  height: 80%;
+  flex: 1 1 80%;
   aspect-ratio: 1/1;
   background-color: black;
   border-radius: 50%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #contact-right img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
 }
 
@@ -150,7 +178,6 @@
   .main_cont {
     padding: 1.5rem;
   }
-
   #about > .container {
     flex-direction: column;
     gap: 1rem;
@@ -161,6 +188,7 @@
   .details {
     padding: 1.5rem;
     margin: auto;
+    text-align: center;
   }
   #work {
     grid-template-columns: 1fr 1fr;
@@ -185,6 +213,7 @@
   .details {
     padding: 1.5rem;
     margin: auto;
+    text-align: center;
   }
   #work {
     grid-template-columns: 1fr;
