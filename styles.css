@@ -5,7 +5,6 @@
 }
 
 .main_cont {
-  outline: 1px solid black;
   padding: 5rem;
 }
 
@@ -13,12 +12,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
 }
 
 #profile_image {
   height: auto;
-  flex: 1 1 40%;
+  flex: 1 1 30%;
   aspect-ratio: 1/1;
   background-color: black;
   border-radius: 50%;
@@ -98,14 +96,67 @@
   object-fit: cover;
 }
 
+#contact {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+#contact_main {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  gap: 10vw;
+  background-color: aqua;
+  align-items: center;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+#contact-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+#contact-left div img {
+  margin-top: 1rem;
+  height: 35px;
+  width: 35px;
+}
+
+#contact-right {
+  height: 80%;
+  aspect-ratio: 1/1;
+  background-color: black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#contact-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .main_cont {
+    padding: 1.5rem;
+  }
+
   #about > .container {
     flex-direction: column;
     gap: 1rem;
   }
   #profile_image {
-    min-height: 50%;
+    max-height: 30vh;
   }
   .details {
     padding: 1.5rem;
@@ -113,5 +164,41 @@
   }
   #work {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main_cont {
+    padding: 1rem;
+  }
+  #about {
+    padding: 1rem;
+  }
+  #about > .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #profile_image {
+    max-height: 30vh;
+  }
+  .details {
+    padding: 1.5rem;
+    margin: auto;
+  }
+  #work {
+    grid-template-columns: 1fr;
+  }
+  #contact {
+    padding: 0;
+  }
+  #contact_main {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
   }
 }
