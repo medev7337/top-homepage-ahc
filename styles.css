@@ -137,7 +137,6 @@ body {
 }
 
 #contact {
-  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -148,7 +147,7 @@ body {
 #contact_main {
   display: flex;
   justify-content: center;
-  height: 50vh;
+  height: auto;
   gap: 10vw;
   background-color: var(--surface);
   align-items: center;
@@ -157,13 +156,17 @@ body {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  padding-top: 3rem;
 }
 
 #contact-left {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 70%;
+}
+
+#contact-left div {
+  margin-top: 1rem;
 }
 
 #contact-left div img {
@@ -182,6 +185,7 @@ body {
   justify-content: center;
   align-items: center;
   outline: 3px solid var(--primary);
+  margin-bottom: 3rem;
 }
 
 #contact-right img {
@@ -246,5 +250,10 @@ body {
     justify-content: center;
     gap: 1rem;
     text-align: center;
+  }
+  #contact-right {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 0;
   }
 }
